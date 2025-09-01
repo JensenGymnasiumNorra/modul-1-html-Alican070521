@@ -1,0 +1,65 @@
+<!--
+Uppgift 5 - Formulär
+
+På sidan ska det finnas:
+    - Ett formulär som innehåller minst följande:
+        - Två textfält
+        - En radio-input
+        - En checkbox-input
+        - En submit-knapp som submittar formuläret och skickar användaren till en tack.html
+        - En select+option input
+        - Tydliga labels för varje input 
+        - Minst 2 delar av formuläret med fieldset
+        - En input som redan har data i sig (value-attributet)
+
+Skapa nu en ny html-fil som heter “tack.html”  som bara har en <h1> tagg som säger “TACK för att du fyllt i mitt formulär” 
+Samt en knapp som öppnar “form.html” igen (titta på förra lektionen med <a> elementet, samt se slide 7)
+Se till att när man klickar på submit-knappen i formuläret så ska tack.html visas i webbläsaren istället.
+
+-->
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulär</title>
+</head>
+<body>
+  <h1>Mitt formulär</h1>
+
+  <form action="tack.html" method="get">
+    
+    
+    <fieldset>
+      <legend>Personuppgifter</legend>
+      
+      <label for="namn">Namn:</label>
+      <input type="text" id="namn" name="namn" value="Alican Cakmak"><br><br>
+
+      <label for="epost">E-post:</label>
+      <input type="text" id="epost" name="epost"><br><br>
+    </fieldset>
+
+    
+    <fieldset>
+      <legend>Inställningar</legend>
+      
+      <p>Kön:</p>
+      <label><input type="radio" name="kon" value="man"> Man</label>
+      <label><input type="radio" name="kon" value="kvinna"> Kvinna</label><br><br>
+
+      <label><input type="checkbox" name="nyheter" value="ja"> Jag vill prenumerera på nyhetsbrev</label><br><br>
+
+      <label for="land">Välj land:</label>
+      <select id="land" name="land">
+        <option value="sverige">Sverige</option>
+        <option value="norge">Norge</option>
+        <option value="danmark">Danmark</option>
+      </select><br><br>
+    </fieldset>
+
+    <button type="submit">Skicka</button>
+  </form>
+
+</body>
+</html>
